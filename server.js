@@ -29,7 +29,7 @@ mongoose.connection.once('open', () => {
 });
 //schema
 const Assessment = require('./models/balance.js');
-
+//image and sign in
 app.get('/', function(req, res) {
     res.render('index.ejs')
 })
@@ -40,10 +40,18 @@ app.get('/assessment/new', function (req, res) {
 //build schema and then create in mongo
 app.post('/assessment/new', function (req, res) {
     Assessment.create(req.body, function(err, createAssessment) {
-        res.redirect('/')
+        res.redirect('/assessment/' + createAssessment.id)
         if (err == null) {
             console.log('Success');
         }
+     })
+})
+//show page
+app.get('/assessment/:id', function (req, res){
+    Assessment.findById(req.params.id, function (err, foundAssessment){
+        res.render('show.ejs', {
+            balance:foundAssessment
+        })
     })
 })
 

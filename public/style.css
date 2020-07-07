@@ -19,7 +19,7 @@
 
 .row {
   padding: 2em;  
-  background-color: antiquewhite;
+  background-color: 
   padding-top: 2em;
 }
 
@@ -63,8 +63,17 @@ body html {
 
 .tin {
   text-align: center;
-  margin-top: 140px;
+  margin-top: 168px;
 }
 h1 {
   font-size: 50px;
+}
+
+.info {
+margin-left: 100px;
+padding-top: 25px;
+}
+
+.page {
+  background-color: aliceblue;
 }
