@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+    <!--from Tenor-->
+    <div class="pic">
+        <img class="man" src="https://media1.tenor.com/images/5e91951a2b88c8d55d667e736b88d3b7/tenor.gif">
+
+        
+        <h1>Tinetti Assessment</h1>
+    </div>
+    <form action="/assessment/new" method="post">
+
+        <label for="PtName">Patient Name</label>
+        <input type="text" id="PtName" name="PatientName">
+
+        <label for="date">DOB</label>
+        <input type="text" id="date" name="DOB">
+
+        <label for="therapist">Therapist</label>
+        <input type="text" id="therapist" name="Therapist">
+
+        <div class="row">
+            <div class="col">
+                <h2>Balance Section</h2>
+
+
+                <p>Sitting Balance</p>
+
+                <input type="radio" id="leans" name="score" value="0">
+                <label for="leans">Leans or slides in chair (0 points)</label><br>
+
+                <input type="radio" id="safe" name="score" value="1">
+                <label for="safe">Steady, safe (1point)</label><br>
+
+                <br>
+
+
+
+
+
+                <p>Rises from chair</p>
+
+                <input type="radio" id="help" name="score-1" value="0">
+                <label for="help">Unable to without help (0 points)</label><br>
+
+                <input type="radio" id="arms" name="score-1" value="1">
+                <label for="arms">Able, uses arms to help (1point)</label><br>
+
+                <input type="radio" id="without" name="score-1" value="2">
+                <label for="without">Able without use of arms (2 points)</label><br>
+
+                <br>
+
+
+
+                <p>Attempts to rise</p>
+
+                <input type="radio" id="unable" name="score-2" value="0">
+                <label for="unable">Unable to without help (0 points)</label><br>
+
+                <input type="radio" id="required" name="score-2" value="1">
+                <label for="required">Able, requires > 1 attempt(1point)</label><br>
+
+                <input type="radio" id="able" name="score-2" value="2">
+                <label for="able">Able without use of arms (2 points)</label><br>
+
+                <br>
+
+
+
+                <p>Immediate standing balnce 1st 5 secs</p>
+
+                <input type="radio" id="unsteady" name="score-3" value="0">
+                <label for="unsteady">Unsteady (staggers, moves feet, trunk sway) (0 points)</label><br>
+
+                <input type="radio" id="walker" name="score-3" value="1">
+                <label for="walker">Steady but uses walker or other support </label>(1point)</label><br>
+
+                <input type="radio" id="able" name="score-3" value="2">
+                <label for="able"> Steady without walker or other support(2 points)</label><br>
+
+                <br>
+
+
+
+                <p>Standing Balance</p>
+
+                <input type="radio" id="balance" name="score-4" value="0">
+                <label for="balance">Unsteady (0 points)</label><br>
+
+                <input type="radio" id="wide" name="score-4" value="1">
+                <label for="wide">Steady but wide stance and uses support</label>(1point)</label><br>
+
+                <input type="radio" id="narrow" name="score-4" value="2">
+                <label for="narrow">Narrow stance without support (2 points)</label><br>
+
+                <br>
+
+
+
+                <p>Nudged</p>
+
+                <input type="radio" id="fall" name="score-5" value="0">
+                <label for="fall">Begins to fall (0 points)</label><br>
+
+                <input type="radio" id="stagger" name="score-5" value="1">
+                <label for="stagger">Staggers, grabs, catches self (1 point)
+                </label><br>
+
+                <input type="radio" id="narrow" name="score-5" value="2">
+                <label for="narrow">Steady (2 points)</label><br>
+
+                <br>
+
+
+                <p>Eyes Closed</p>
+
+                <input type="radio" id="eyes" name="score-6" value="0">
+                <label for="eyes">Unsteady (0 points)</label><br>
+
+                <input type="radio" id="steady" name="score-6" value="1">
+                <label for="steady">Steady (1 point)
+                </label><br>
+
+                <br>
+
+
+
+                <p>Turning 360 degrees:Steps</p>
+
+                <input type="radio" id="steps" name="score-7" value="0">
+                <label for="steps">Discontinuous steps (0 points)</label><br>
+                <input type="radio" id="continuous" name="score-7" value="1">
+                <label for="continuous">Continuous steps (1 point)</label><br>
+
+                <br>
+
+
+                <p>Turning 360 degrees:Steadiness</p>
+
+                <input type="radio" id="turning" name="score-8" value="0">
+                <label for="turning">Unsteady (grabs, staggers) (0 points)</label><br>
+                <input type="radio" id="continuous" name="score-8" value="1">
+                <label for="continuous">Steady (1 point)</label><br>
+
+                <br>
+
+
+                <p>Sitting Down</p>
+
+                <input type="radio" id="sitting" name="score-9" value="0">
+                <label for="sitting"> Unsafe (misjudged distance, falls into chair)(0 points)</label><br>
+
+                <input type="radio" id="not" name="score-9" value="1">
+                <label for="not">Uses arms or not a smooth motion(1 point)
+                </label><br>
+
+                <input type="radio" id="smooth" name="score-9" value="2">
+                <label for="smooth">Safe, smooth motion (2 points)</label><br>
+
+                <br>
+
+            </div>
+            <div class="col">
+                <h2>Gait Section</h2>
+
+
+                <p> Indication of gait</p>
+
+                <input type="radio" id="attempts" name="score-10" value="0">
+                <label for="attmepts"> Any hesitancy or multiple attempts (0 points)</label><br>
+
+                <input type="radio" id="nohesitancy" name="score-10" value="1">
+                <label for="nohesitancy">No Hesitancy(1 point)
+                </label><br>
+
+                <br>
+
+
+                <p> Step length and height: Right</p>
+
+                <input type="radio" id="right" name="score-11" value="0">
+                <label for="right">Step to (0 points)</label><br>
+
+                <input type="radio" id="left" name="score-11" value="1">
+                <label for="left">Step through R(1 point)
+                </label><br>
+
+                <br>
+
+
+
+                <p> Step length and height: Left</p>
+
+                <input type="radio" id="length" name="score-12" value="0">
+                <label for="length">Step to (0 points)</label><br>
+
+                <input type="radio" id="height" name="score-12" value="1">
+                <label for="height">Step through L(1 point)
+                </label><br>
+
+                <br>
+
+
+
+                <p> Foot clearance: Right</p>
+
+                <input type="radio" id="clearance" name="score-13" value="0">
+                <label for="clearance">Foot drop(0 points)</label><br>
+
+                <input type="radio" id="foot" name="score-13" value="1">
+                <label for="foot">R foot clears floor L(1 point)
+                </label><br>
+
+                <br>
+
+
+
+                <p> Foot clearance: Right</p>
+
+                <input type="radio" id="drop" name="score-14" value="0">
+                <label for="drop">Foot drop (0 points)</label><br>
+
+                <input type="radio" id="foot" name="score-14" value="1">
+                <label for="foot">L foot clears floor (1 point)
+                </label><br>
+
+
+                <p> Step Symmetry </p>
+
+                <input type="radio" id="not" name="score-15" value="0">
+                <label for="not">Right and left step lengths not equal (0 points)</label><br>
+
+                <input type="radio" id="equa;" name="score-15" value="1">
+                <label for="equal">Right and left step lengths appear equal (1 point)
+                </label><br>
+
+                <br>
+
+
+
+                <p> Step Continuity</p>
+
+                <input type="radio" id="not" name="score-16" value="0">
+                <label for="not">Stopping or discontinuity between steps (0 points)</label><br>
+
+                <input type="radio" id="equal" name="score-16" value="1">
+                <label for="equal">Steps appear continuous (1 point)
+                </label><br>
+
+                <br>
+
+
+
+
+                <p> Path </p>
+
+                <input type="radio" id="marked" name="score-17" value="0">
+                <label for="marked">Marked deviation(0 points)</label><br>
+
+                <input type="radio" id="mild" name="score-17" value="1">
+                <label for="mild"> Mild/moderate deviation or uses w. aid(1 point)
+                </label><br>
+
+                <input type="radio" id="without" name="score-17" value="2">
+                <label for="without">Straight without aid (2 points)</label><br>
+
+                <br>
+
+
+
+                <p> Trunk </p>
+
+                <input type="radio" id="sway" name="score-18" value="0">
+                <label for="sway">Marked sway or uses w. aid(0 points)</label><br>
+
+                <input type="radio" id="knees" name="score-18" value="1">
+                <label for="knees"> No sway but flex. knees or back or uses arms for stability(1 point)
+                </label><br>
+
+                <input type="radio" id="without" name="score-18" value="2">
+                <label for="without">No sway, flex., use of arms or w. aid (2 points)</label><br>
+
+
+                <br>
+
+
+
+                <p> Walk Time </p>
+
+                <input type="radio" id="time" name="score-19" value="0">
+                <label for="time">Heels apart (0 points)</label><br>
+
+                <input type="radio" id="foot" name="score-19" value="1">
+                <label for="foot">Heels almost touching while walking (1 point)
+                </label><br>
+
+                <br>
+                <input type="submit" value="Submit">
+
+            </div>
+        </div>
+    </form>
+
+    <!-- info from bootstrap website -->
+    <div class="row no-gutter">
+        <div class="col-md-3">Tinetti Score</div>
+        <div class="col-md-3"">Fall Risk Interpretation</div>
+        <div class=" w-100"></div>
+        <div class="col-md-3"">Below 19</div>
+        <div class=" col-md-3"">Highly Fall Risk</div>
+        <div class="w-100"></div>
+
+        <div class="col-md-3"">19-23</div>
+        <div class=" col-md-3"">Moderate Fall Risk</div>
+        <div class="w-100"></div>
+        <div class="col-md-3"">Above 23</div>
+        <div class=" col-md-3"">Low Fall Risk</div>
+    </div>
+
+
+
+</body>
+
+</html>
