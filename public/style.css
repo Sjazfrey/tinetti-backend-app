@@ -1,11 +1,15 @@
 .pic h1 {
-    text-align: center;
-    background-color: antiquewhite;
-    padding-top: 1em;
+  text-align: center;
+  background-color: antiquewhite;
+  padding-top: 1em;
 }
+
 .man {
   height: 90px;
- 
+
+}
+.card{
+  display: inline-block;
 }
 
 .pic {
@@ -18,8 +22,8 @@
 }
 
 .row {
-  padding: 2em;  
-  background-color: 
+  padding: 2em;
+ 
   padding-top: 2em;
 }
 
@@ -37,13 +41,8 @@
   padding-left: 10px;
 }
 
-body html {  
-  margin: 0;
-  padding: 0;   
-}
 
-
-.backgroundimg { 
+.backgroundimg {
   background-image: url("https://www.globaltimes.cn/Portals/0//attachment/2017/2017-05-17/62f98ecc-df37-42f0-ae41-3593cb044b9d.jpg");
 
   background-size: cover;
@@ -65,18 +64,24 @@ body html {
   text-align: center;
   margin-top: 168px;
 }
+
 h1 {
   font-size: 50px;
 }
 
 .info {
-margin-left: 100px;
-padding-top: 25px;
+  margin-left: 100px;
+  padding-top: 25px;
+  
 }
 
 .page {
   background-color: aliceblue;
 }
-form {
+
+/* form {
   background-color: antiquewhite;
+} */
+.section {
+  text-align: center;
 }

@@ -25,8 +25,9 @@
         
         <h1>Tinetti Assessment</h1>
     </div>
+   
     <form action="/assessment/new" method="post">
-
+        <div class="section"
         <label for="PtName">Patient Name</label>
         <input type="text" id="PtName" name="PatientName">
 
@@ -35,12 +36,15 @@
 
         <label for="therapist">Therapist</label>
         <input type="text" id="therapist" name="Therapist">
+    </div>
+     
 
         <div class="row">
             <div class="col">
                 <h2>Balance Section</h2>
 
-
+                    //https://getbootstrap.com/docs/4.1/layout/grid/
+                    //balance  and gait section
                 <p>Sitting Balance</p>
 
                 <input type="radio" id="leans" name="score" value="0">
@@ -50,9 +54,6 @@
                 <label for="safe">Steady, safe (1point)</label><br>
 
                 <br>
-
-
-
 
 
                 <p>Rises from chair</p>
@@ -69,7 +70,6 @@
                 <br>
 
 
-
                 <p>Attempts to rise</p>
 
                 <input type="radio" id="unable" name="score2" value="0">
@@ -82,7 +82,6 @@
                 <label for="able">Able without use of arms (2 points)</label><br>
 
                 <br>
-
 
 
                 <p>Immediate standing balnce 1st 5 secs</p>
@@ -99,7 +98,6 @@
                 <br>
 
 
-
                 <p>Standing Balance</p>
 
                 <input type="radio" id="balance" name="score4" value="0">
@@ -112,7 +110,6 @@
                 <label for="narrow">Narrow stance without support (2 points)</label><br>
 
                 <br>
-
 
 
                 <p>Nudged</p>
@@ -140,7 +137,6 @@
                 </label><br>
 
                 <br>
-
 
 
                 <p>Turning 360 degrees:Steps</p>
@@ -206,7 +202,6 @@
                 <br>
 
 
-
                 <p> Step length and height: Left</p>
 
                 <input type="radio" id="length" name="score12" value="0">
@@ -219,7 +214,6 @@
                 <br>
 
 
-
                 <p> Foot clearance: Right</p>
 
                 <input type="radio" id="clearance" name="score13" value="0">
@@ -230,7 +224,6 @@
                 </label><br>
 
                 <br>
-
 
 
                 <p> Foot clearance: Right</p>
@@ -255,7 +248,6 @@
                 <br>
 
 
-
                 <p> Step Continuity</p>
 
                 <input type="radio" id="not" name="score16" value="0">
@@ -266,8 +258,6 @@
                 </label><br>
 
                 <br>
-
-
 
 
                 <p> Path </p>
@@ -285,7 +275,6 @@
                 <br>
 
 
-
                 <p> Trunk </p>
 
                 <input type="radio" id="sway" name="score18" value="0">
@@ -298,9 +287,7 @@
                 <input type="radio" id="without" name="score18" value="2">
                 <label for="without">No sway, flex., use of arms or w. aid (2 points)</label><br>
 
-
                 <br>
-
 
 
                 <p> Walk Time </p>

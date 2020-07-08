@@ -10,16 +10,11 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-
 </head>
 
 <body class="page">
     
-    <!-- show informatin of entry Bootstrap website -->
+    <!-- show informatin of entry.   Bootstrap website -->
     <div class="info">
         <div class="card" style="max-width: 20rem;">
             <div class="card-header">
@@ -30,7 +25,8 @@
                     <p>DOB: <%=balance.DOB %></p>
                     <p>Therapist: <%=balance.Therapist %></p>
                 </div>
-                <div class="card-text">
+                <div class="card-text"> 
+                    <!-- https://getbootstrap.com/docs/4.1/layout/grid/ -->
                     <p>Balance Score:
                         <%= balance.score + balance.score1 + balance.score2 + balance.score3 + balance.score4 + balance.score5 + balance.score6 + balance.score7 + balance.score8 + balance.score9 %>
                     </p>
@@ -45,7 +41,7 @@
         </div>
     </div>
 
-    <!-- info from bootstrap website -->
+    <!-- info from bootstrap website https://getbootstrap.com/docs/4.1/layout/grid/-->
     <div class="row no-gutter">
         <div class="col-md-3">Tinetti Score</div>
         <div class="col-md-3"">Fall Risk Interpretation</div>

@@ -33,7 +33,31 @@ const Assessment = require('./models/balance.js');
 app.get('/', function(req, res) {
     res.render('index.ejs')
 })
+//show all info on assessment all page
+app.get('/assessment/all', function (req, res){
+    Assessment.find(function(err, assessments){
+        // res.send(assessments);
+        res.render('showall.ejs', {
+            balance:assessments
+        })
+        
+    })    
+})
+// edit route
+app.put('/balance/:index', function (req, res) {
+    balance[req.params.index] = req.body
+    res.redirect('/balance');
+})
 
+// //delete 
+// app.delete('/assessment/:id', function(req, res) {
+//     Assessment.findByIdAndDelete(req.params.id,  function (err, deleteLog) {
+//         res.redirect('/');
+//     });   
+// });
+
+
+// new 
 app.get('/assessment/new', function (req, res) {
     res.render('new.ejs')
 })
@@ -54,6 +78,8 @@ app.get('/assessment/:id', function (req, res){
         })
     })
 })
+
+
 
 
 app.listen(port, function () {

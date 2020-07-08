@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create a new patient -->
+  <h1>New Patient</h1>
+    <nav>
+        <a href="/assessment/new"> New Patient</a>
+    </nav>
+    <ul>
+        <% for(let i = 0; i < balance.length; i++) { %>
+        <div class="card" style="max-width: 20rem;">
+
+            <a class="card-header" href="/assessment/<%=balance[i].id%>">
+            <%=balance[i].PatientName; %>
+            </a>
+            <p>
+             <%=balance[i].DOB; %>
+            </p>
+            <p>
+             <%=balance[i].Therapist; %>   
+            </p> 
+
+            <form action="/assessment/<%=balance[i].id%>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE" />
+                </form>
+            </div>
+        <% } %>
+    </ul>
+</body>
+</html>
