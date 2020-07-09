@@ -29,6 +29,10 @@ mongoose.connection.once('open', () => {
 });
 //schema
 const Assessment = require('./models/balance.js');
+
+//const usersController = require('./controllers/sessions.js');
+//app.use('/users', usersController);
+
 //image and sign in
 app.get('/', function(req, res) {
     res.render('index.ejs')
@@ -43,24 +47,52 @@ app.get('/assessment/all', function (req, res){
         
     })    
 })
-// edit route
-app.put('/balance/:index', function (req, res) {
-    balance[req.params.index] = req.body
-    res.redirect('/balance');
+
+
+//delete 
+app.delete('/assessment/:id', function(req, res) {
+    Assessment.findByIdAndDelete(req.params.id,  function (err, deleteLog) {
+        res.redirect('/assessment/all')
+    });   
+});
+
+//update
+app.put('/assessment/:index', function(req, res) { 	
+    Assessment.findByIdAndUpdate(req.params.index, req.body, function (err, assessment){
+        res.redirect('/assessment/' + assessment.id)
+    })
+	//assessment[req.params.index] = req.body 
+	//res.redirect('/fruits'); 
 })
 
-// //delete 
-// app.delete('/assessment/:id', function(req, res) {
-//     Assessment.findByIdAndDelete(req.params.id,  function (err, deleteLog) {
-//         res.redirect('/');
-//     });   
-// });
+//edit
+app.get('/assessment/:index/edit', function(req, res) {
+    Assessment.findById(req.params.index, function (err, assessment) {
+        res.render("edit.ejs", {
+            balance:assessment
+        });
+    });
+});
+   
 
 
 // new 
-app.get('/assessment/new', function (req, res) {
-    res.render('new.ejs')
+app.get('/assessment/new/:id?', function (req, res) {
+
+    if (req.params.id != null) {
+        Assessment.findById(req.params.id, function(err, assessment) {
+
+            res.render('new.ejs', {
+                balance: assessment
+            });
+        })
+    } else {
+        res.render('new.ejs', {
+            balance: {}
+        })
+    }
 })
+
 //build schema and then create in mongo
 app.post('/assessment/new', function (req, res) {
     Assessment.create(req.body, function(err, createAssessment) {

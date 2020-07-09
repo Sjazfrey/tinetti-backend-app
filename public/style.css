@@ -22,14 +22,19 @@
 }
 
 .row {
-  padding: 2em;
- 
+  padding: 2em; 
   padding-top: 2em;
+  background-color: antiquewhite
+}
+
+.col {
+  background-color: antiquewhite;
 }
 
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0;
+  background-color: aliceblue;
 }
 
 .row.no-gutter [class*='col']:not(:first-child),
@@ -39,9 +44,10 @@
   border: 1px solid black;
   border-radius: 2px;
   padding-left: 10px;
+  
 }
 
-
+/* http://www.globaltimes.cn/galleries/851.html */
 .backgroundimg {
   background-image: url("https://www.globaltimes.cn/Portals/0//attachment/2017/2017-05-17/62f98ecc-df37-42f0-ae41-3593cb044b9d.jpg");
 

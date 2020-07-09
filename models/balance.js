@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const assessmentSchema = new mongoose.Schema({
     PatientName: String,
-    DOB: String,
+    TestDate: String,
     Therapist: String,
     score: Number,
     "score1": Number,

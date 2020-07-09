@@ -29,13 +29,13 @@
     <form action="/assessment/new" method="post">
         <div class="section"
         <label for="PtName">Patient Name</label>
-        <input type="text" id="PtName" name="PatientName">
+        <input type="text" id="PtName" name="PatientName" value="<%=balance.PatientName%>">
 
-        <label for="date">DOB</label>
-        <input type="text" id="date" name="DOB">
+        <label for="date">Date</label>
+        <input type="text" id="date" name="TestDate" value="<%=balance.TestDate%>">
 
         <label for="therapist">Therapist</label>
-        <input type="text" id="therapist" name="Therapist">
+        <input type="text" id="therapist" name="Therapist" value="<%=balance.Therapist%>">
     </div>
      
 
@@ -43,8 +43,8 @@
             <div class="col">
                 <h2>Balance Section</h2>
 
-                    //https://getbootstrap.com/docs/4.1/layout/grid/
-                    //balance  and gait section
+                    <!-- //https://getbootstrap.com/docs/4.1/layout/grid/
+                    //balance  and gait section -->
                 <p>Sitting Balance</p>
 
                 <input type="radio" id="leans" name="score" value="0">

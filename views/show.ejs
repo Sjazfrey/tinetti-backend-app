@@ -18,11 +18,11 @@
     <div class="info">
         <div class="card" style="max-width: 20rem;">
             <div class="card-header">
-                <p>Name: <%=balance.PatientName %></p>
+                <p> Name: <%=balance.PatientName %></p>
             </div>
             <div class="card-body">
                 <div class="card-title">
-                    <p>DOB: <%=balance.DOB %></p>
+                    <p>Date: <%=balance.TestDate%></p>
                     <p>Therapist: <%=balance.Therapist %></p>
                 </div>
                 <div class="card-text"> 
@@ -36,6 +36,9 @@
                     <p>Total Score:
                         <%= balance.score + balance.score1 + balance.score2 + balance.score3 + balance.score4 + balance.score5 + balance.score6 + balance.score7 + balance.score8 + balance.score9  + balance.score10 + balance.score11 + balance.score12 + balance.score13 + balance.score14 + balance.score15 + balance.score16 + balance.score17 + balance.score18 + balance.score19%>
                     </p>
+                    <form action="/assessment/<%=balance.id%>/edit" method="GET">
+                        <input type="submit" value="Edit"/>
+                        </form>
                 </div>
             </div>
         </div>

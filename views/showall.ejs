@@ -18,11 +18,11 @@
         <% for(let i = 0; i < balance.length; i++) { %>
         <div class="card" style="max-width: 20rem;">
 
-            <a class="card-header" href="/assessment/<%=balance[i].id%>">
+            <h5><a class="card-header" href="/assessment/<%=balance[i].id%>">
             <%=balance[i].PatientName; %>
-            </a>
+            </a></h5>
             <p>
-             <%=balance[i].DOB; %>
+             <%=balance[i].TestDate; %>
             </p>
             <p>
              <%=balance[i].Therapist; %>   

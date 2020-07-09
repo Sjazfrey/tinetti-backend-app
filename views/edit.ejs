@@ -25,15 +25,16 @@
         
         <h1>Edit Tinetti Assessment</h1>
     </div>
+
    
-    <form action="/assessment/new" method="post">
+    <form action="/assessment/<%=balance.id%>?_method=PUT" method="post" >
         <div class="section"
 
         <label for="PtName">Patient Name</label>
-        <input type="text" id="PtName" name="PatientName" value="<%=Balance.PatientName%>"/><br/>
+        <input type="text" id="PtName" name="PatientName" value="<%=balance.PatientName%>"/><br/>
 
-        <label for="date">DOB</label>
-        <input type="text" id="date" name="DOB" value="<%=balance.DOB%>"/><br/>
+        <label for="date">Date</label>
+        <input type="text" id="date" name="TestDate" value="<%=balance.TestDate%>"/><br/>
 
         <label for="therapist">Therapist</label>
         <input type="text" id="therapist" name="Therapist" value="<%=balance.Therapist%>"/><br/>
@@ -42,10 +43,14 @@
 
         <div class="row">
             <div class="col">
-                <h2>Balance Section</h2>
+                <h2>Balance Score</h2>
+                <p>Balance Score:
+                    <%= balance.score + balance.score1 + balance.score2 + balance.score3 + balance.score4 + balance.score5 + balance.score6 + balance.score7 + balance.score8 + balance.score9 %>
+                </p>
 
 
-                <p>Sitting Balance</p>
+
+                <!-- <p>Sitting Balance</p>
 
                 <input type="radio" id="leans" name="score" value="0">
                 <label for="leans">Leans or slides in chair (0 points)</label><br>
@@ -171,14 +176,17 @@
                 <input type="radio" id="smooth" name="score9" value="2">
                 <label for="smooth">Safe, smooth motion (2 points)</label><br>
 
-                <br>
+                <br> -->
 
             </div>
             <div class="col">
-                <h2>Gait Section</h2>
+                <h2>Gait Score</h2>
+                <p>Gait Score:
+                    <%=balance.score10 + balance.score11 + balance.score12 + balance.score13 + balance.score14 + balance.score15 + balance.score16 + balance.score17 + balance.score18 + balance.score19 %>
+                </p>
 
 
-                <p> Indication of gait</p>
+                <!-- <p> Indication of gait</p>
 
                 <input type="radio" id="attempts" name="score10" value="0">
                 <label for="attmepts"> Any hesitancy or multiple attempts (0 points)</label><br>
@@ -299,15 +307,15 @@
                 <label for="foot">Heels almost touching while walking (1 point)
                 </label><br>
 
-                <br>
-                <input type="submit" value="Submit">
+                <br> -->
 
             </div>
+            <input type="submit" value="Update">
         </div>
     </form>
-
+<p class = "text-center">Unable to update here due to APTA standards in performing a certified Tinetti Test. <a href = "/assessment/new/<%= balance.id %>">Click here</a> to go to new Tinetti Test</p>
 
 
 </body>
-
+</html>
 </html>
