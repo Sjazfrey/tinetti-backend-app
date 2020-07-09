@@ -10,13 +10,26 @@
 </head>
 <body>
     <!-- Create a new patient -->
-  <h1>New Patient</h1>
+  <h1>New Patients</h1>
     <nav>
         <a href="/assessment/new"> New Patient</a>
     </nav>
     <ul>
         <% for(let i = 0; i < balance.length; i++) { %>
-        <div class="card" style="max-width: 20rem;">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <a href="/assessment/<%=balance[i].id%>"><h5 class="card-title">
+                    <%=balance[i].PatientName; %>
+                    </h5></a>
+                  <h6 class="card-subtitle mb-2 text-muted">Date Tested: <%=balance[i].TestDate; %></h6>
+                  <form action="/assessment/<%=balance[i].id%>?_method=DELETE" method="POST">
+                    <input class="card-link btn btn-danger" type="submit" value="Delete" />
+                </form>
+                  <a href="/assessment/<%=balance[i].id%>/edit" class="card-link btn btn-primary">Edit</a>
+                </div>
+              </div>
+
+        <!-- <div class="card" style="width: 10rem;">
 
             <h5><a class="card-header" href="/assessment/<%=balance[i].id%>">
             <%=balance[i].PatientName; %>
@@ -31,7 +44,7 @@
             <form action="/assessment/<%=balance[i].id%>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" />
                 </form>
-            </div>
+            </div> -->
         <% } %>
     </ul>
 </body>

@@ -12,13 +12,22 @@
 </head>
 
 <body>
-    <div class="row backgroundimg">
-        <div class="container">
-
-
-
+    <!-- https://getbootstrap.com/docs/4.0/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/assessment/all">All Patients</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/assessment/new">New Patient</a>
+              </li>
+            </ul>
             <!-- sign in for email and PW http://www.globaltimes.cn/galleries/851.html-->
-            <form class="form-inline">
+            <form class="form-inline my-2 my-lg-0">
                 <div class="form-group">
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
@@ -31,6 +40,10 @@
 
                 <button type="submit" class="btn btn-default">Sign in</button>
             </form>
+          </div>
+    </nav>
+    <div class="row backgroundimg">
+        <div class="container">
 
             <div class="tin">
                 <h1> Tinetti Balance Test</h1>
