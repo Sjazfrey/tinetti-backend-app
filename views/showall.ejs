@@ -9,12 +9,21 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body {
+          background-color:rgb(176, 225, 209);
+        }
+        </style>
     <!-- Create a new patient -->
-  <h1>New Patients</h1>
+  <h1 class="text-center">Patients</h1>
     <nav>
+        <p class="text-center">
         <a href="/assessment/new"> New Patient</a>
+        </p>
     </nav>
     <ul>
+       
+
         <% for(let i = 0; i < balance.length; i++) { %>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
@@ -46,6 +55,8 @@
                 </form>
             </div> -->
         <% } %>
+        
     </ul>
+    </p>
 </body>
 </html>

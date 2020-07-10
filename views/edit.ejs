@@ -25,20 +25,27 @@
         
         <h1>Edit Tinetti Assessment</h1>
     </div>
-
+    <div class="mx-auto" style="width: 200px;">
+      
+     
+   
+        
+      
    
     <form action="/assessment/<%=balance.id%>?_method=PUT" method="post" >
-        <div class="section"
+        <div class="section"></div>
 
         <label for="PtName">Patient Name</label>
-        <input type="text" id="PtName" name="PatientName" value="<%=balance.PatientName%>"/><br/>
+        <input type="text" id="PtName" name="PatientName" value="<%=balance.PatientName%>"/><br>
 
-        <label for="date">Date</label>
-        <input type="text" id="date" name="TestDate" value="<%=balance.TestDate%>"/><br/>
+        <label for="date">Test Date</label>
+        <input type="text" id="date" name="TestDate" value="<%=balance.TestDate%>"/><br>
 
         <label for="therapist">Therapist</label>
-        <input type="text" id="therapist" name="Therapist" value="<%=balance.Therapist%>"/><br/>
-    </div>
+        <input type="text" id="therapist" name="Therapist" value="<%=balance.Therapist%>"/><br>
+       
+     </div>
+   
      
 
         <div class="row">
@@ -314,6 +321,10 @@
         </div>
     </form>
 <p class = "text-center">Unable to update here due to APTA standards in performing a certified Tinetti Test. <a href = "/assessment/new/<%= balance.id %>">Click here</a> to go to new Tinetti Test</p>
+
+<p>
+    <a href = "https://www.apta.org/"></a>
+
 
 
 </body>

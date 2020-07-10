@@ -4,6 +4,16 @@
   padding-top: 1em;
 }
 
+.mx-auto {
+ text-align: center;
+
+}
+
+
+/* .text-center {
+  background-color: antiquewhite
+} */
+
 .man {
   height: 90px;
 
@@ -88,6 +98,3 @@ h1 {
 /* form {
   background-color: antiquewhite;
 } */
-.section {
-  text-align: center;
-}
