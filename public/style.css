@@ -4,11 +4,16 @@
   padding-top: 1em;
 }
 
-.mx-auto {
- text-align: center;
 
+.wpage {
+  background-color: antiquewhite;
 }
 
+
+.section {
+text-align: center;
+
+}
 
 /* .text-center {
   background-color: antiquewhite

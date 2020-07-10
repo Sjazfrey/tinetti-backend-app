@@ -12,11 +12,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 </head>
-
-
 <body>
     <!--from Tenor-->
     <div class="pic">
@@ -27,15 +25,16 @@
     </div>
    
     <form action="/assessment/new" method="post">
-        <div class="section"
+        <div class="section">
+
         <label for="PtName">Patient Name</label>
-        <input type="text" id="PtName" name="PatientName" value="<%=balance.PatientName%>">
+        <input type="text" id="PtName" name="PatientName" value="<%=balance.PatientName%>"required>
 
         <label for="date">Date</label>
-        <input type="text" id="date" name="TestDate" value="<%=balance.TestDate%>">
+        <input type="text" id="date" name="TestDate" value="<%=balance.TestDate%>"required>
 
         <label for="therapist">Therapist</label>
-        <input type="text" id="therapist" name="Therapist" value="<%=balance.Therapist%>">
+        <input type="text" id="therapist" name="Therapist" value="<%=balance.Therapist%>"required>
     </div>
      
 
@@ -47,7 +46,7 @@
                     //balance  and gait section -->
                 <p>Sitting Balance</p>
 
-                <input type="radio" id="leans" name="score" value="0">
+                <input type="radio" id="leans" name="score" value="0" required>
                 <label for="leans">Leans or slides in chair (0 points)</label><br>
 
                 <input type="radio" id="safe" name="score" value="1">
@@ -58,7 +57,7 @@
 
                 <p>Rises from chair</p>
 
-                <input type="radio" id="help" name="score1" value="0">
+                <input type="radio" id="help" name="score1" value="0"required>
                 <label for="help">Unable to without help (0 points)</label><br>
 
                 <input type="radio" id="arms" name="score1" value="1">
@@ -72,7 +71,7 @@
 
                 <p>Attempts to rise</p>
 
-                <input type="radio" id="unable" name="score2" value="0">
+                <input type="radio" id="unable" name="score2" value="0"required>
                 <label for="unable">Unable to without help (0 points)</label><br>
 
                 <input type="radio" id="required" name="score2" value="1">
@@ -86,7 +85,7 @@
 
                 <p>Immediate standing balnce 1st 5 secs</p>
 
-                <input type="radio" id="unsteady" name="score3" value="0">
+                <input type="radio" id="unsteady" name="score3" value="0"required>
                 <label for="unsteady">Unsteady (staggers, moves feet, trunk sway) (0 points)</label><br>
 
                 <input type="radio" id="walker" name="score3" value="1">
@@ -100,7 +99,7 @@
 
                 <p>Standing Balance</p>
 
-                <input type="radio" id="balance" name="score4" value="0">
+                <input type="radio" id="balance" name="score4" value="0"required>
                 <label for="balance">Unsteady (0 points)</label><br>
 
                 <input type="radio" id="wide" name="score4" value="1">
@@ -114,7 +113,7 @@
 
                 <p>Nudged</p>
 
-                <input type="radio" id="fall" name="score5" value="0">
+                <input type="radio" id="fall" name="score5" value="0"required>
                 <label for="fall">Begins to fall (0 points)</label><br>
 
                 <input type="radio" id="stagger" name="score5" value="1">
@@ -129,7 +128,7 @@
 
                 <p>Eyes Closed</p>
 
-                <input type="radio" id="eyes" name="score6" value="0">
+                <input type="radio" id="eyes" name="score6" value="0"required>
                 <label for="eyes">Unsteady (0 points)</label><br>
 
                 <input type="radio" id="steady" name="score6" value="1">
@@ -141,7 +140,7 @@
 
                 <p>Turning 360 degrees:Steps</p>
 
-                <input type="radio" id="steps" name="score7" value="0">
+                <input type="radio" id="steps" name="score7" value="0"required>
                 <label for="steps">Discontinuous steps (0 points)</label><br>
                 <input type="radio" id="continuous" name="score7" value="1">
                 <label for="continuous">Continuous steps (1 point)</label><br>
@@ -151,7 +150,7 @@
 
                 <p>Turning 360 degrees:Steadiness</p>
 
-                <input type="radio" id="turning" name="score8" value="0">
+                <input type="radio" id="turning" name="score8" value="0"required>
                 <label for="turning">Unsteady (grabs, staggers) (0 points)</label><br>
                 <input type="radio" id="continuous" name="score8" value="1">
                 <label for="continuous">Steady (1 point)</label><br>
@@ -161,7 +160,7 @@
 
                 <p>Sitting Down</p>
 
-                <input type="radio" id="sitting" name="score9" value="0">
+                <input type="radio" id="sitting" name="score9" value="0"required>
                 <label for="sitting"> Unsafe (misjudged distance, falls into chair)(0 points)</label><br>
 
                 <input type="radio" id="not" name="score9" value="1">
@@ -180,7 +179,7 @@
 
                 <p> Indication of gait</p>
 
-                <input type="radio" id="attempts" name="score10" value="0">
+                <input type="radio" id="attempts" name="score10" value="0"required>
                 <label for="attmepts"> Any hesitancy or multiple attempts (0 points)</label><br>
 
                 <input type="radio" id="nohesitancy" name="score10" value="1">
@@ -192,7 +191,7 @@
 
                 <p> Step length and height: Right</p>
 
-                <input type="radio" id="right" name="score11" value="0">
+                <input type="radio" id="right" name="score11" value="0"required>
                 <label for="right">Step to (0 points)</label><br>
 
                 <input type="radio" id="left" name="score11" value="1">
@@ -204,7 +203,7 @@
 
                 <p> Step length and height: Left</p>
 
-                <input type="radio" id="length" name="score12" value="0">
+                <input type="radio" id="length" name="score12" value="0"required>
                 <label for="length">Step to (0 points)</label><br>
 
                 <input type="radio" id="height" name="score12" value="1">
@@ -216,7 +215,7 @@
 
                 <p> Foot clearance: Right</p>
 
-                <input type="radio" id="clearance" name="score13" value="0">
+                <input type="radio" id="clearance" name="score13" value="0"required>
                 <label for="clearance">Foot drop(0 points)</label><br>
 
                 <input type="radio" id="foot" name="score13" value="1">
@@ -228,7 +227,7 @@
 
                 <p> Foot clearance: Right</p>
 
-                <input type="radio" id="drop" name="score14" value="0">
+                <input type="radio" id="drop" name="score14" value="0"required>
                 <label for="drop">Foot drop (0 points)</label><br>
 
                 <input type="radio" id="foot" name="score14" value="1">
@@ -238,7 +237,7 @@
 
                 <p> Step Symmetry </p>
 
-                <input type="radio" id="not" name="score15" value="0">
+                <input type="radio" id="not" name="score15" value="0"required>
                 <label for="not">Right and left step lengths not equal (0 points)</label><br>
 
                 <input type="radio" id="equa;" name="score15" value="1">
@@ -250,7 +249,7 @@
 
                 <p> Step Continuity</p>
 
-                <input type="radio" id="not" name="score16" value="0">
+                <input type="radio" id="not" name="score16" value="0"required>
                 <label for="not">Stopping or discontinuity between steps (0 points)</label><br>
 
                 <input type="radio" id="equal" name="score16" value="1">
@@ -262,7 +261,7 @@
 
                 <p> Path </p>
 
-                <input type="radio" id="marked" name="score17" value="0">
+                <input type="radio" id="marked" name="score17" value="0"required>
                 <label for="marked">Marked deviation(0 points)</label><br>
 
                 <input type="radio" id="mild" name="score17" value="1">
@@ -277,7 +276,7 @@
 
                 <p> Trunk </p>
 
-                <input type="radio" id="sway" name="score18" value="0">
+                <input type="radio" id="sway" name="score18" value="0"required>
                 <label for="sway">Marked sway or uses w. aid(0 points)</label><br>
 
                 <input type="radio" id="knees" name="score18" value="1">
@@ -292,7 +291,7 @@
 
                 <p> Walk Time </p>
 
-                <input type="radio" id="time" name="score19" value="0">
+                <input type="radio" id="time" name="score19" value="0"required>
                 <label for="time">Heels apart (0 points)</label><br>
 
                 <input type="radio" id="foot" name="score19" value="1">
@@ -305,6 +304,8 @@
             </div>
         </div>
     </form>
+
+   
 
 
 
