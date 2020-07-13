@@ -31,6 +31,9 @@
                     <%=balance[i].PatientName; %>
                     </h5></a>
                   <h6 class="card-subtitle mb-2 text-muted">Date Tested: <%=balance[i].TestDate; %></h6>
+                  <p>Total Score:
+                    <%= balance[i].score + balance[i].score1 + balance[i].score2 + balance[i].score3 + balance[i].score4 + balance[i].score5 + balance[i].score6 + balance[i].score7 + balance[i].score8 + balance[i].score9  + balance[i].score10 + balance[i].score11 + balance[i].score12 + balance[i].score13 + balance[i].score14 + balance[i].score15 + balance[i].score16 + balance[i].score17 + balance[i].score18 + balance[i].score19 %>
+                </p>
                   <form action="/assessment/<%=balance[i].id%>?_method=DELETE" method="POST">
                     <input class="card-link btn btn-danger" type="submit" value="Delete" />
                 </form>

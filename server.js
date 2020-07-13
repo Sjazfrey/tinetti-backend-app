@@ -34,53 +34,64 @@ const Assessment = require('./models/balance.js');
 //app.use('/users', usersController);
 
 //image and sign in
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.render('index.ejs')
 })
 //show all info on assessment all page
-app.get('/assessment/all', function (req, res){
-    Assessment.find(function(err, assessments){
+//https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
+app.get('/assessment/all', function (req, res) {
+    Assessment.find(function (err, assessments) {
+        assessments.sort(function (param1, param2) {
+            if (param1.PatientName > param2.PatientName) { // dog > cat // 15 > 24
+                return 1;
+            } else if (param1.PatientName < param2.PatientName) {
+                return -1;
+            } else {
+                return 0;
+            }
+        })
+        console.log(assessments);
         // res.send(assessments);
         res.render('showall.ejs', {
-            balance:assessments
+            balance: assessments
         })
-        
-    })    
+
+    })
 })
 
 
 //delete 
-app.delete('/assessment/:id', function(req, res) {
-    Assessment.findByIdAndDelete(req.params.id,  function (err, deleteLog) {
+app.delete('/assessment/:id', function (req, res) {
+    Assessment.findByIdAndDelete(req.params.id, function (err, deleteLog) {
         res.redirect('/assessment/all')
-    });   
+    });
 });
 
 //update
-app.put('/assessment/:index', function(req, res) { 	
-    Assessment.findByIdAndUpdate(req.params.index, req.body, function (err, assessment){
+app.put('/assessment/:index', function (req, res) {
+    Assessment.findByIdAndUpdate(req.params.index, req.body, function (err, assessment) {
         res.redirect('/assessment/' + assessment.id)
     })
-	//assessment[req.params.index] = req.body 
-	//res.redirect('/fruits'); 
+    //assessment[req.params.index] = req.body 
+    //res.redirect('/fruits'); 
 })
 
 //edit
-app.get('/assessment/:index/edit', function(req, res) {
+app.get('/assessment/:index/edit', function (req, res) {
     Assessment.findById(req.params.index, function (err, assessment) {
         res.render("edit.ejs", {
-            balance:assessment
+            balance: assessment
         });
     });
 });
-   
+
 
 
 // new 
 app.get('/assessment/new/:id?', function (req, res) {
 
     if (req.params.id != null) {
-        Assessment.findById(req.params.id, function(err, assessment) {
+        Assessment.findById(req.params.id, function (err, assessment) {
 
             res.render('new.ejs', {
                 balance: assessment
@@ -95,18 +106,18 @@ app.get('/assessment/new/:id?', function (req, res) {
 
 //build schema and then create in mongo
 app.post('/assessment/new', function (req, res) {
-    Assessment.create(req.body, function(err, createAssessment) {
+    Assessment.create(req.body, function (err, createAssessment) {
         res.redirect('/assessment/' + createAssessment.id)
         if (err == null) {
             console.log('Success');
         }
-     })
+    })
 })
 //show page
-app.get('/assessment/:id', function (req, res){
-    Assessment.findById(req.params.id, function (err, foundAssessment){
+app.get('/assessment/:id', function (req, res) {
+    Assessment.findById(req.params.id, function (err, foundAssessment) {
         res.render('show.ejs', {
-            balance:foundAssessment
+            balance: foundAssessment
         })
     })
 })
