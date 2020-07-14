@@ -50,7 +50,7 @@ app.get('/assessment/all', function (req, res) {
                 return 0;
             }
         })
-        console.log(assessments);
+       
         // res.send(assessments);
         res.render('showall.ejs', {
             balance: assessments
